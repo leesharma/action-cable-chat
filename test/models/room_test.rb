@@ -1,17 +1,16 @@
 # == Schema Information
 #
-# Table name: messages
+# Table name: rooms
 #
 #  id         :integer          not null, primary key
-#  content    :text
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  room_id    :integer
 #
 
 require 'test_helper'
 
-class MessageTest < ActiveSupport::TestCase
+class RoomTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

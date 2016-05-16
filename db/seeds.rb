@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+rooms = Room.create([
+  { name: 'general' },
+  { name: 'random' },
+  { name: 'technology' },
+  { name: 'politics' },
+  { name: 'sports' },
+])

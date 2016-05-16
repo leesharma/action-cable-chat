@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'rooms#show'
+  get '/:room', to: 'rooms#show', as: 'room'
+  root to: 'rooms#index'
 end
