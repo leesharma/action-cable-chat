@@ -20,6 +20,10 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# Use PostgreSQL in production for Heroku
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  timeout: 3000
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>

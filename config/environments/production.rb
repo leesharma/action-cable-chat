@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Settings for Heroku
+  config.web_socket_server_url = "wss://#{ENV['HOST']}/cable"
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -35,8 +38,8 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Action Cable endpoint configuration
-  # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  config.action_cable.url = "wss://#{ENV['HOST']}"
+  config.action_cable.allowed_request_origins = [ /https?:\/\/#{ENV['HOST']}/ ]
 
   # Don't mount Action Cable in the main server process.
   # config.action_cable.mount_path = nil
