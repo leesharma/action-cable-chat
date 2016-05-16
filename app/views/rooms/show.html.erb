@@ -1,4 +1,4 @@
-<h1>#<%= @room.name %></h1>
+<h1 class="room-name"><%= @room.name %></h1>
 
 <div id="messages" data-room="<%= @room.name %>" data-room-id="<%= @room.id %>">
   <%= render @room.messages %>

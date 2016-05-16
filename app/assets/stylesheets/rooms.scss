@@ -1,3 +1,51 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  width: 100%; height: 100%;
+}
+
+@mixin preceding_hash {
+  &:before {
+    content: '#';
+    color: #ccc;
+  }
+}
+
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.room {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  list-style: none;
+  @include preceding_hash
+}
+
+.room-name {
+  @include preceding_hash
+}
+
+p.message {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+#messages {
+  margin-bottom: 1em;
+}
+
+form{
+  border: 1px solid #ccc;
+  padding: 1em;
+  background-color: #eee;
+
+  input {
+    width: 100%;
+    font-size: 1.5em;
+  }
+}

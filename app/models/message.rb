@@ -17,6 +17,10 @@ class Message < ApplicationRecord
   validates :room,    presence: true
   validates :content, presence: true
 
+  def humanized_time
+    created_at.to_formatted_s(:long_ordinal)
+  end
+
   protected
 
   def broadcast_message
