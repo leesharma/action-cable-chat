@@ -9,6 +9,7 @@
 #  room_id    :integer
 #
 
+# Represents a single message posted to a chatroom
 class Message < ApplicationRecord
   after_create_commit :broadcast_message
 
