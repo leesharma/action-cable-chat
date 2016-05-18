@@ -1,0 +1,10 @@
+h1.room-name = @room.name
+
+div#messages data-room="#{@room.name}" data-room-id="#{@room.id}"
+  == render @room.messages
+
+form#new_message
+  label Say Something:<br />
+  input.message type="text" data-behavior="room_speaker"
+
+p = link_to 'Back to home', root_path
